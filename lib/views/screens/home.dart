@@ -4,6 +4,7 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:cari_teman/views/widgets/post_item.dart';
 import 'package:cari_teman/util/data.dart';
 import 'package:cari_teman/views/widgets/camera.dart';
+import 'package:cari_teman/views/screens/about.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -90,11 +91,15 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.filter_list,
-            ),
-            onPressed: () {},
-          ),
+              icon: Icon(
+                Icons.info,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),
+                );
+              }),
         ],
       ),
       body: ListView.builder(

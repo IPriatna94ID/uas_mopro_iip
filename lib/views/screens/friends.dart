@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cari_teman/util/data.dart';
+import 'package:cari_teman/views/screens/about.dart';
 
 class Friends extends StatefulWidget {
   @override
@@ -18,11 +19,15 @@ class _FriendsState extends State<Friends> {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.filter_list,
-            ),
-            onPressed: () {},
-          ),
+              icon: Icon(
+                Icons.info,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),
+                );
+              }),
         ],
       ),
       body: ListView.separated(

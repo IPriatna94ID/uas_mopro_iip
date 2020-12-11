@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cari_teman/util/data.dart';
+import 'package:cari_teman/views/screens/about.dart';
 
 class Notifications extends StatefulWidget {
   @override
@@ -17,11 +18,15 @@ class _NotificationsState extends State<Notifications> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.filter_list,
-            ),
-            onPressed: () {},
-          ),
+              icon: Icon(
+                Icons.info,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),
+                );
+              }),
         ],
       ),
       body: ListView.separated(
